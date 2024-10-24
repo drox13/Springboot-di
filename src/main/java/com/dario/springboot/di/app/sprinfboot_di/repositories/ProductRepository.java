@@ -10,7 +10,7 @@ public class ProductRepository {
 
     public ProductRepository() {
         this.data = Arrays.asList(
-            new Product(1L, "Mmoria corsair 32", 300L),
+            new Product(1L, "Memoria corsair 32", 300L),
             new Product(2L, "CPU inter Core i9", 850L),
             new Product(3L, "Teclado Razer mini",180L),
             new Product(4L, "Motherboard Gigabyte", 490L)

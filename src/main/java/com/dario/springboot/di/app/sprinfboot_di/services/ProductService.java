@@ -13,8 +13,8 @@ public class ProductService {
     public List<Product> findAll(){
         return productRepository.findAll().stream().map(p -> {
             Double priceImp = p.getPrice()*1.25d;
-            p.setPrice(priceImp.longValue());
-            return p;
+            Product productAux = new Product(p.getId(), p.getName(), priceImp.longValue());
+            return productAux;
         }).collect(Collectors.toList());
     }
     public Product findById(Long id){
