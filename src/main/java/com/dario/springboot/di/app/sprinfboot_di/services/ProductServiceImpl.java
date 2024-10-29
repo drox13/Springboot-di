@@ -4,12 +4,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.dario.springboot.di.app.sprinfboot_di.models.Product;
-import com.dario.springboot.di.app.sprinfboot_di.repositories.ProductRepository;
+import com.dario.springboot.di.app.sprinfboot_di.repositories.ProductRepositoryImpl;
 
-public class ProductService {
+public class ProductServiceImpl implements IProductService{
 
-    private ProductRepository productRepository = new ProductRepository();
+    private ProductRepositoryImpl productRepository = new ProductRepositoryImpl();
 
+    @Override
     public List<Product> findAll(){
         return productRepository.findAll().stream().map(p -> {
             Double priceTax = p.getPrice()*1.25d;
@@ -19,6 +20,8 @@ public class ProductService {
             return productAux;
         }).collect(Collectors.toList());
     }
+    
+    @Override
     public Product findById(Long id){
         return productRepository.findById(id);
     }
