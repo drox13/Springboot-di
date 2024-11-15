@@ -2,13 +2,13 @@ package com.dario.springboot.di.app.sprinfboot_di.repositories;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 
 import com.dario.springboot.di.app.sprinfboot_di.models.Product;
 
-@Component
+@Repository
 public class ProductRepositoryImpl implements IProductRepository {
     private List<Product> data;
 
