@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.dario.springboot.di.app.sprinfboot_di.models.Product;
 
-@Repository
+@Repository("productFoo")
 public class ProductRepositoryFoo implements IProductRepository{
 
     @Override

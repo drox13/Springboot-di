@@ -3,6 +3,8 @@ package com.dario.springboot.di.app.sprinfboot_di.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.dario.springboot.di.app.sprinfboot_di.models.Product;
@@ -10,10 +12,14 @@ import com.dario.springboot.di.app.sprinfboot_di.repositories.IProductRepository
 
 @Service
 public class ProductServiceImpl implements IProductService{
-
+    /* 
+    asi seria el uso de  @Qualifier con el uso de  @Autowired()
+    @Autowired()
+    @Qualifier("productFoo")
+     */
     private IProductRepository productRepository;
-
-        public ProductServiceImpl(IProductRepository productRepository) {
+    
+    public ProductServiceImpl(@Qualifier("productFoo") IProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 

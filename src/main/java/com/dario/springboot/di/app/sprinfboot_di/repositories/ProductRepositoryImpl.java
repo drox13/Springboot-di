@@ -10,7 +10,7 @@ import java.util.Arrays;
 import com.dario.springboot.di.app.sprinfboot_di.models.Product;
 
 @Primary
-@Repository
+@Repository("productList")
 public class ProductRepositoryImpl implements IProductRepository {
     private List<Product> data;
 
