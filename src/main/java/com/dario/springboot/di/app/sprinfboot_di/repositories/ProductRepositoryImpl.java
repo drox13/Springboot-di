@@ -4,14 +4,16 @@ import java.util.List;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.context.annotation.SessionScope;
+//import org.springframework.web.context.annotation.SessionScope;
+//import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.Arrays;
 
 import com.dario.springboot.di.app.sprinfboot_di.models.Product;
 
 @Primary
-@SessionScope
+//@RequestScope
+//@SessionScope
 @Repository("productList")
 public class ProductRepositoryImpl implements IProductRepository {
     private List<Product> data;

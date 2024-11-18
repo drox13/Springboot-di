@@ -28,14 +28,14 @@ public class ProductServiceImpl implements IProductService{
             Double priceTax = p.getPrice()*1.25d;
             //Product productAux = new Product(p.getId(), p.getName(), priceImp.longValue());
             
+            /* 
             p.setPrice(priceTax.longValue());
             return p;
+            */
             
-            /* 
             Product productAux = (Product) p.clone();
             productAux.setPrice(priceTax.longValue());
             return productAux;
-            */
         }).collect(Collectors.toList());
     }
     
